@@ -17,4 +17,4 @@ const AddToLs = id => {
     saveCartToLs(cart)
 }
 
-export {AddToLs}
+export {AddToLs, getStoredCart}

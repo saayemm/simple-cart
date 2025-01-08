@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import Bottle from "../bottle/Bottle"
+import { AddToLs, getStoredCart } from "../../utilities/localstroage"
 
 export default function Bottles() {
     const [bottles, setBottles] = useState([])
@@ -12,9 +13,16 @@ export default function Bottles() {
         .then(data=>setBottles(data))
     }, [])
 
+    useEffect(()=>{
+       const storedCart = getStoredCart()
+       console.log(storedCart);
+       
+    }, [])
+
     const hundleAddToCart = bottle => {
         const newCart = [...cart, bottle]
         setCart(newCart)
+        AddToLs(bottle.id)
         
     }
   return (
