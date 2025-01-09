@@ -9,6 +9,8 @@ export default function Bottle({bottle, hundleAddToCart}) {
         <img className="max-w-48" src={img} alt="" />
         <h2>Price: ${price}</h2>
         <h2>Category: {category}</h2>
+        <h2>Category: {category}</h2>
+
         <button 
             onClick={()=>hundleAddToCart(bottle)}
             className="bg-slate-700 text-white px-4 py-1 rounded-lg">Buy Now</button>
